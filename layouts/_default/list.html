@@ -1,0 +1,14 @@
+{{ define "main" }}
+<section style="padding: 8rem 2rem var(--section-pad);">
+    <div class="section-inner">
+        <h1 class="section-title">{{ .Title }}</h1>
+        {{ .Content }}
+        {{ range .Pages }}
+        <article style="margin-bottom: 2rem;">
+            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            <p>{{ .Description }}</p>
+        </article>
+        {{ end }}
+    </div>
+</section>
+{{ end }}

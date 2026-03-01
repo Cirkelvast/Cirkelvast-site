@@ -1,0 +1,58 @@
+baseURL = "https://cirkelvast.nl/"
+languageCode = "nl"
+title = "Cirkelvast — Advies & Consultancy Publiek Vastgoed"
+defaultContentLanguage = "nl"
+enableRobotsTXT = true
+paginate = 9
+
+[params]
+  description = "Cirkelvast is het advies- en consultancybureau van Cheimaa Aouni, gespecialiseerd in publiek vastgoed."
+  author = "Cheimaa Aouni"
+  email = "info@cirkelvast.nl"
+  linkedin = "https://www.linkedin.com/in/cheimaaa/"
+  logo = "/images/cirkelvast-logo.png"
+  portrait = "/images/cheimaa-aouni.png"
+
+[languages]
+  [languages.nl]
+    languageName = "Nederlands"
+    weight = 1
+    contentDir = "content"
+    [languages.nl.params]
+      subtitle = "Publiek Vastgoed Specialist"
+      heroTitle = "Helder advies voor *complex* publiek vastgoed"
+      heroText = "Cirkelvast helpt overheden en publieke organisaties bij het verduurzamen, ontwikkelen en strategisch inzetten van maatschappelijk vastgoed. Van schoolgebouwen tot defensie-objecten."
+      ctaPrimary = "Neem contact op"
+      ctaSecondary = "Bekijk expertise"
+      navExpertise = "Expertise"
+      navProjects = "Projecten"
+      navAbout = "Over Cheimaa"
+      navBlog = "Inzichten"
+      navContact = "Contact"
+  [languages.en]
+    languageName = "English"
+    weight = 2
+    contentDir = "content.en"
+    [languages.en.params]
+      subtitle = "Public Real Estate Specialist"
+      heroTitle = "Clear advice for *complex* public real estate"
+      heroText = "Cirkelvast helps governments and public organisations with the sustainability, development and strategic deployment of public real estate. From school buildings to defence properties."
+      ctaPrimary = "Get in touch"
+      ctaSecondary = "View expertise"
+      navExpertise = "Expertise"
+      navProjects = "Projects"
+      navAbout = "About Cheimaa"
+      navBlog = "Insights"
+      navContact = "Contact"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5

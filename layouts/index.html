@@ -1,0 +1,209 @@
+{{ define "main" }}
+
+<!-- HERO -->
+<section class="hero" id="hero">
+    <div class="hero-inner">
+        <div class="hero-content">
+            <div class="hero-badge">{{ .Site.Params.subtitle }}</div>
+            <h1>{{ .Site.Params.heroTitle | markdownify }}</h1>
+            <p class="hero-text">{{ .Site.Params.heroText }}</p>
+            <div class="hero-cta-row">
+                <a href="#contact" class="btn-primary">{{ .Site.Params.ctaPrimary }} →</a>
+                <a href="#expertise" class="btn-secondary">{{ .Site.Params.ctaSecondary }}</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-card-stack">
+                <div class="hero-portrait">
+                    <img src="{{ .Site.Params.portrait }}" alt="Cheimaa Aouni — Cirkelvast" loading="eager">
+                </div>
+                <div class="floating-badge top-right">
+                    <span class="badge-dot" style="background: var(--green);"></span>
+                    {{ if eq .Language.Lang "nl" }}15+ jaar ervaring{{ else }}15+ years experience{{ end }}
+                </div>
+                <div class="floating-badge bottom-left">
+                    <span class="badge-dot" style="background: var(--gold);"></span>
+                    KPMG · Defensie · Ruimte-OK
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- EXPERTISE -->
+<section class="expertise" id="expertise">
+    <div class="section-inner">
+        <div class="section-header fade-up">
+            <div class="section-label">{{ if eq .Language.Lang "nl" }}Expertisegebieden{{ else }}Areas of Expertise{{ end }}</div>
+            <h2 class="section-title">{{ if eq .Language.Lang "nl" }}Waar taaie vastgoedvraagstukken helder worden{{ else }}Where complex real estate challenges become clear{{ end }}</h2>
+            <p class="section-subtitle">{{ if eq .Language.Lang "nl" }}Cirkelvast combineert diepgaande kennis van publiek vastgoed met een pragmatische, resultaatgerichte aanpak. Van beleidsniveau tot uitvoering.{{ else }}Cirkelvast combines deep public real estate knowledge with a pragmatic, results-driven approach. From policy level to implementation.{{ end }}</p>
+        </div>
+        <div class="expertise-grid">
+            <div class="expertise-card fade-up">
+                <div class="expertise-icon green">🌱</div>
+                <h3>{{ if eq .Language.Lang "nl" }}Verduurzaming Maatschappelijk Vastgoed{{ else }}Sustainability of Public Real Estate{{ end }}</h3>
+                <p>{{ if eq .Language.Lang "nl" }}Strategisch advies en uitvoeringsondersteuning bij het verduurzamen van maatschappelijke portefeuilles. Van routekaarten tot subsidieaanvragen en implementatie van het VMV-programma.{{ else }}Strategic advice and implementation support for making public portfolios sustainable. From roadmaps to subsidy applications and VMV programme implementation.{{ end }}</p>
+            </div>
+            <div class="expertise-card fade-up" style="transition-delay: 0.1s;">
+                <div class="expertise-icon blue">🏫</div>
+                <h3>{{ if eq .Language.Lang "nl" }}Onderwijshuisvesting (POHV){{ else }}Educational Housing (POHV){{ end }}</h3>
+                <p>{{ if eq .Language.Lang "nl" }}Ondersteuning bij de integrale aanpak van schoolgebouwen. Gezonde, inclusieve en duurzame scholen bouwen — sneller en kostenefficiënter. In samenwerking met Ruimte-OK.{{ else }}Support for an integrated approach to school buildings. Building healthy, inclusive and sustainable schools — faster and more cost-efficiently. In collaboration with Ruimte-OK.{{ end }}</p>
+            </div>
+            <div class="expertise-card fade-up" style="transition-delay: 0.2s;">
+                <div class="expertise-icon gold">🔧</div>
+                <h3>{{ if eq .Language.Lang "nl" }}Vastgoedstrategie & Transformatie{{ else }}Real Estate Strategy & Transformation{{ end }}</h3>
+                <p>{{ if eq .Language.Lang "nl" }}Ontwikkeling van vastgoedstrategieën voor publieke organisaties. Van portefeuillemanagement en data-gedreven besluitvorming tot organisatietransformaties bij Defensie en gemeenten.{{ else }}Development of real estate strategies for public organisations. From portfolio management and data-driven decision-making to organisational transformations at Defence and municipalities.{{ end }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TRACK RECORD -->
+<section class="track-record" id="track-record">
+    <div class="section-inner">
+        <div class="section-header fade-up">
+            <div class="section-label">{{ if eq .Language.Lang "nl" }}Projecten & Opdrachtgevers{{ else }}Projects & Clients{{ end }}</div>
+            <h2 class="section-title">{{ if eq .Language.Lang "nl" }}Bewezen impact bij toonaangevende organisaties{{ else }}Proven impact at leading organisations{{ end }}</h2>
+        </div>
+        <div class="track-grid">
+            <div class="track-item fade-up">
+                <div class="track-org">KPMG / Ministerie van Defensie</div>
+                <div class="track-title">{{ if eq .Language.Lang "nl" }}Vastgoedstrategie Defensie{{ else }}Defence Real Estate Strategy{{ end }}</div>
+                <div class="track-desc">{{ if eq .Language.Lang "nl" }}Strategisch advies aan het Ministerie van Defensie over de toekomst van de vastgoedportefeuille. Ontwikkeling van een integrale vastgoedstrategie via KPMG.{{ else }}Strategic advice to the Ministry of Defence on the future of their real estate portfolio. Development of an integrated real estate strategy through KPMG.{{ end }}</div>
+            </div>
+            <div class="track-item fade-up" style="transition-delay: 0.1s;">
+                <div class="track-org">TKI Bouw en Techniek</div>
+                <div class="track-title">{{ if eq .Language.Lang "nl" }}Programma VMV — Verduurzaming Maatschappelijk Vastgoed{{ else }}VMV Programme — Sustainability of Public Real Estate{{ end }}</div>
+                <div class="track-desc">{{ if eq .Language.Lang "nl" }}Bijdrage aan het innovatieprogramma voor verduurzaming van maatschappelijk vastgoed. Kennisdeling en opschaling van innovaties in de bouw- en technieksector.{{ else }}Contribution to the innovation programme for sustainability of public real estate. Knowledge sharing and scaling of innovations in the construction sector.{{ end }}</div>
+            </div>
+            <div class="track-item fade-up" style="transition-delay: 0.2s;">
+                <div class="track-org">Ruimte-OK / POHV</div>
+                <div class="track-title">{{ if eq .Language.Lang "nl" }}Programma Onderwijshuisvesting{{ else }}Educational Housing Programme{{ end }}</div>
+                <div class="track-desc">{{ if eq .Language.Lang "nl" }}Werkt aan de integrale aanpak om sneller en kostenefficiënter betere schoolgebouwen te realiseren. In samenwerking met het ministerie van OCW, PO-Raad, VO-raad en VNG.{{ else }}Working on an integrated approach to realise better school buildings faster and more cost-efficiently. In collaboration with the Ministry of Education, school boards and municipalities.{{ end }}</div>
+            </div>
+            <div class="track-item fade-up" style="transition-delay: 0.3s;">
+                <div class="track-org">De Bouwcampus / Invest-NL</div>
+                <div class="track-title">{{ if eq .Language.Lang "nl" }}Huizenbouw & POHV Productontwikkeling{{ else }}Housing Construction & POHV Product Development{{ end }}</div>
+                <div class="track-desc">{{ if eq .Language.Lang "nl" }}Bijdrage aan innovatie in de woningbouw via De Bouwcampus. Eerder bij Invest-NL gewerkt aan productontwikkeling voor het Programma Onderwijshuisvesting.{{ else }}Contributing to housing construction innovation through De Bouwcampus. Previously worked at Invest-NL on product development for the Educational Housing Programme.{{ end }}</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+    <div class="section-inner">
+        <div class="about-grid">
+            <div class="about-image-wrapper fade-up">
+                <div class="about-image-placeholder">
+                    <img src="{{ .Site.Params.portrait }}" alt="Cheimaa Aouni — Oprichter Cirkelvast" loading="lazy">
+                </div>
+                <div class="about-image-accent"></div>
+                <div class="about-image-accent-2"></div>
+            </div>
+            <div class="about-content fade-up" style="transition-delay: 0.15s;">
+                <div class="section-label">{{ if eq .Language.Lang "nl" }}Over{{ else }}About{{ end }}</div>
+                <h2 class="about-name">Cheimaa Aouni</h2>
+                <p class="about-role">{{ if eq .Language.Lang "nl" }}Oprichter Cirkelvast · Adviseur Publiek Vastgoed{{ else }}Founder Cirkelvast · Public Real Estate Advisor{{ end }}</p>
+                <p class="about-text">{{ if eq .Language.Lang "nl" }}Met meer dan 15 jaar ervaring in publiek vastgoed — bij de rijksoverheid, gemeenten en als adviseur — weet Cheimaa als geen ander hoe complexe vastgoedvraagstukken tot heldere oplossingen leiden. Ze combineert strategisch denken met een hands-on mentaliteit en maakt taaie materie toegankelijk.{{ else }}With over 15 years of experience in public real estate — in central government, municipalities and as an advisor — Cheimaa knows how to transform complex real estate challenges into clear solutions. She combines strategic thinking with a hands-on mentality and makes complex matters accessible.{{ end }}</p>
+                <p class="about-text">{{ if eq .Language.Lang "nl" }}Eerder werkte Cheimaa bij een ministerie, als Manager Vastgoed bij de gemeente Zoetermeer en als raadslid in Amstelveen. Nu adviseert ze als zelfstandige via Cirkelvast én als Manager Strategy & Operations bij KPMG.{{ else }}Previously, Cheimaa worked at a ministry, as Real Estate Manager at the municipality of Zoetermeer and as council member in Amstelveen. She now advises independently through Cirkelvast and as Manager Strategy & Operations at KPMG.{{ end }}</p>
+                <div class="about-tags">
+                    <span class="about-tag">Publiek Vastgoed</span>
+                    <span class="about-tag">Verduurzaming</span>
+                    <span class="about-tag">Onderwijshuisvesting</span>
+                    <span class="about-tag">Vastgoedstrategie</span>
+                    <span class="about-tag">Data & Innovatie</span>
+                    <span class="about-tag">Portefeuillemanagement</span>
+                </div>
+                <div class="social-links">
+                    <a href="{{ .Site.Params.linkedin }}" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="mailto:{{ .Site.Params.email }}" class="social-link" aria-label="Email">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BLOG / INSIGHTS -->
+<section class="blog" id="blog">
+    <div class="section-inner">
+        <div class="blog-header fade-up">
+            <div class="section-header" style="margin-bottom: 0;">
+                <div class="section-label">{{ if eq .Language.Lang "nl" }}Inzichten & Publicaties{{ else }}Insights & Publications{{ end }}</div>
+                <h2 class="section-title">{{ if eq .Language.Lang "nl" }}Scherpe analyses, heldere taal{{ else }}Sharp analysis, clear language{{ end }}</h2>
+            </div>
+            <a href="{{ .Site.Home.RelPermalink }}blog/" class="btn-secondary">
+                {{ if eq .Language.Lang "nl" }}Alle inzichten →{{ else }}All insights →{{ end }}
+            </a>
+        </div>
+        <div class="blog-grid">
+            {{ $posts := where .Site.RegularPages "Section" "blog" }}
+            {{ range first 3 $posts }}
+            <a href="{{ .Permalink }}" class="blog-card fade-up">
+                <div class="blog-card-image" style="background: linear-gradient(135deg, {{ with .Params.gradient }}{{ . }}{{ else }}#0B2545 0%, #1B6B93 100%{{ end }});">
+                    {{ with .Params.image }}
+                    <img src="{{ . }}" alt="{{ $.Title }}" style="width:100%;height:100%;object-fit:cover;">
+                    {{ end }}
+                    {{ with .Params.category }}
+                    <span class="blog-cat">{{ . }}</span>
+                    {{ end }}
+                </div>
+                <div class="blog-card-body">
+                    <div class="blog-card-date">{{ .Date.Format "2 January 2006" }}</div>
+                    <h3>{{ .Title }}</h3>
+                    <p>{{ .Description }}</p>
+                </div>
+            </a>
+            {{ end }}
+            
+            {{ if not $posts }}
+            <!-- Placeholder cards when no posts exist yet -->
+            <div class="blog-card fade-up">
+                <div class="blog-card-image" style="background: linear-gradient(135deg, #2D8B4E 0%, #4CAF50 100%);">
+                    <span class="blog-cat">VMV</span>
+                </div>
+                <div class="blog-card-body">
+                    <div class="blog-card-date">{{ if eq .Language.Lang "nl" }}Binnenkort{{ else }}Coming soon{{ end }}</div>
+                    <h3>{{ if eq .Language.Lang "nl" }}Verduurzaming maatschappelijk vastgoed: waar staan we?{{ else }}Sustainability of public real estate: where do we stand?{{ end }}</h3>
+                    <p>{{ if eq .Language.Lang "nl" }}Een actuele stand van zaken over de voortgang van het VMV-programma.{{ else }}A current overview of VMV programme progress.{{ end }}</p>
+                </div>
+            </div>
+            <div class="blog-card fade-up" style="transition-delay: 0.1s;">
+                <div class="blog-card-image" style="background: linear-gradient(135deg, #0B2545 0%, #1B6B93 100%);">
+                    <span class="blog-cat">POHV</span>
+                </div>
+                <div class="blog-card-body">
+                    <div class="blog-card-date">{{ if eq .Language.Lang "nl" }}Binnenkort{{ else }}Coming soon{{ end }}</div>
+                    <h3>{{ if eq .Language.Lang "nl" }}De urgentie achter het Programma Onderwijshuisvesting{{ else }}The urgency behind the Educational Housing Programme{{ end }}</h3>
+                    <p>{{ if eq .Language.Lang "nl" }}Waarom duizenden schoolgebouwen niet voldoen.{{ else }}Why thousands of school buildings fall short.{{ end }}</p>
+                </div>
+            </div>
+            <div class="blog-card fade-up" style="transition-delay: 0.2s;">
+                <div class="blog-card-image" style="background: linear-gradient(135deg, #D4A843 0%, #E8C468 100%);">
+                    <span class="blog-cat">Strategie</span>
+                </div>
+                <div class="blog-card-body">
+                    <div class="blog-card-date">{{ if eq .Language.Lang "nl" }}Binnenkort{{ else }}Coming soon{{ end }}</div>
+                    <h3>{{ if eq .Language.Lang "nl" }}Data-gedreven vastgoedmanagement: lessen uit de praktijk{{ else }}Data-driven real estate management: lessons from practice{{ end }}</h3>
+                    <p>{{ if eq .Language.Lang "nl" }}Hoe gemeenten slimmer hun vastgoedportefeuille aansturen.{{ else }}How municipalities manage their portfolio more effectively.{{ end }}</p>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+    <div class="cta-box fade-up">
+        <h2>{{ if eq .Language.Lang "nl" }}Samen werken aan beter publiek vastgoed?{{ else }}Ready to improve your public real estate?{{ end }}</h2>
+        <p>{{ if eq .Language.Lang "nl" }}Of het nu gaat om verduurzaming, onderwijshuisvesting of vastgoedstrategie — Cirkelvast denkt graag met u mee. Neem vrijblijvend contact op.{{ else }}Whether it's sustainability, educational housing or real estate strategy — Cirkelvast is ready to help. Get in touch for a free consultation.{{ end }}</p>
+        <a href="mailto:{{ .Site.Params.email }}" class="btn-cta">{{ .Site.Params.email }} →</a>
+    </div>
+</section>
+
+{{ end }}

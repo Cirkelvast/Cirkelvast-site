@@ -1,0 +1,31 @@
+{{ define "main" }}
+<section class="blog-page">
+    <div class="section-inner">
+        <div class="section-header fade-up" style="padding-top: 8rem;">
+            <div class="section-label">{{ if eq .Language.Lang "nl" }}Inzichten & Publicaties{{ else }}Insights & Publications{{ end }}</div>
+            <h1 class="section-title">{{ if eq .Language.Lang "nl" }}Alle inzichten{{ else }}All insights{{ end }}</h1>
+            <p class="section-subtitle">{{ if eq .Language.Lang "nl" }}Scherpe analyses en heldere uitleg over publiek vastgoed, verduurzaming en onderwijshuisvesting.{{ else }}Sharp analysis and clear explanations about public real estate, sustainability and educational housing.{{ end }}</p>
+        </div>
+        <div class="blog-grid">
+            {{ range .Pages }}
+            <a href="{{ .Permalink }}" class="blog-card fade-up">
+                <div class="blog-card-image" style="background: linear-gradient(135deg, {{ with .Params.gradient }}{{ . }}{{ else }}#0B2545 0%, #1B6B93 100%{{ end }});">
+                    {{ with .Params.image }}
+                    <img src="{{ . }}" alt="{{ $.Title }}" style="width:100%;height:100%;object-fit:cover;">
+                    {{ end }}
+                    {{ with .Params.category }}
+                    <span class="blog-cat">{{ . }}</span>
+                    {{ end }}
+                </div>
+                <div class="blog-card-body">
+                    <div class="blog-card-date">{{ .Date.Format "2 January 2006" }}</div>
+                    <h3>{{ .Title }}</h3>
+                    <p>{{ .Description }}</p>
+                </div>
+            </a>
+            {{ end }}
+        </div>
+        {{ template "_internal/pagination.html" . }}
+    </div>
+</section>
+{{ end }}

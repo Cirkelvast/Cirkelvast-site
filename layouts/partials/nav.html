@@ -1,0 +1,29 @@
+<nav class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="{{ .Site.Home.RelPermalink }}" class="nav-logo-text">
+            <img src="{{ .Site.Params.logo }}" alt="Cirkelvast" style="height: 38px; width: auto;">
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="{{ .Site.Home.RelPermalink }}#expertise">{{ .Site.Params.navExpertise }}</a></li>
+            <li><a href="{{ .Site.Home.RelPermalink }}#track-record">{{ .Site.Params.navProjects }}</a></li>
+            <li><a href="{{ .Site.Home.RelPermalink }}#about">{{ .Site.Params.navAbout }}</a></li>
+            <li><a href="{{ .Site.Home.RelPermalink }}blog/">{{ .Site.Params.navBlog }}</a></li>
+            <li><a href="{{ .Site.Home.RelPermalink }}#contact">{{ .Site.Params.navContact }}</a></li>
+            <li>
+                {{ range .Translations }}
+                <a href="{{ .Permalink }}" class="lang-toggle">{{ upper .Language.Lang }}</a>
+                {{ end }}
+                {{ if not .Translations }}
+                {{ if eq .Language.Lang "nl" }}
+                <a href="/en/" class="lang-toggle">EN</a>
+                {{ else }}
+                <a href="/" class="lang-toggle">NL</a>
+                {{ end }}
+                {{ end }}
+            </li>
+        </ul>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>

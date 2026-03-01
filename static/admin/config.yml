@@ -1,0 +1,24 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+
+locale: "nl"
+
+collections:
+  - name: "blog"
+    label: "Blog / Inzichten"
+    folder: "content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Datum", name: "date", widget: "datetime" }
+      - { label: "Beschrijving (voor SEO & previews)", name: "description", widget: "text", required: true }
+      - { label: "Categorie", name: "category", widget: "select", options: ["VMV", "POHV", "Strategie", "Innovatie", "Evenement", "Column"] }
+      - { label: "Afbeelding", name: "image", widget: "image", required: false }
+      - { label: "Gradient (kleur achtergrond als geen afbeelding)", name: "gradient", widget: "string", default: "#0B2545 0%, #1B6B93 100%", required: false }
+      - { label: "Uitgelicht op homepage", name: "featured", widget: "boolean", default: false }
+      - { label: "Inhoud", name: "body", widget: "markdown" }
